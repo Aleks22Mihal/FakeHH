@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_in_card_vacancy_experience">Иконка опыта</string>
+    <string name="icon_in_card_vacancy_the_company_is_verified">Иконка проверенности компании</string>
+    <string name="content_description_icon_in_card_recommended">Иконка карточки рекомендации</string>
+    <string name="content_description_icon_in_search_bar">Иконка поиска</string>
+    <string name="content_description_icon_in_search_bar_back">Иконка назад</string>
+    <string name="placeholder_text_field_text">Должность, ключевые слова</string>
+    <string name="vacancies_for_you">Вакансии для вас</string>
+    <string name="looking_number_now">Сейчас просматривают</string>
+    <string name="published">Опубликовано %1$d %2$s</string>
+    <string name="sorting_text">По соответствию</string>
+    <string name="try_again">Попробуйте еще раз</string>
+    <string name="respond">Откликнуться</string>
+    <string name="search">Поиск</string>
+    <string name="favorite">Избранное</string>
+    <string name="responses">Отклики</string>
+    <string name="messages">Сообщения</string>
+    <string name="profile">Профиль</string>
+    <string name="vacancy">Вакансия</string>
+    <string name="back">Назад</string>
+    <string name="the_response_has_been_sent">Отклик отправлен</string>
+    <string name="not_a_functional_element">Нефункциональный элемент</string>
+
+
+    <plurals name="looking_number">
+        <item quantity="zero">Сейчас просматривают %d человек</item>
+        <item quantity="one">Сейчас просматривают %d человек</item>
+        <item quantity="two">Сейчас просматривают %d человека</item>
+        <item quantity="few">Сейчас просматривают %d человека</item>
+        <item quantity="many">Сейчас просматривают %d человек</item>
+        <item quantity="other">Сейчас просматривают %d человек</item>
+    </plurals>
+
+    <plurals name="vacancies_number">
+        <item quantity="zero">Еще %d вакансий</item>
+        <item quantity="one">Еще %d вакансия</item>
+        <item quantity="two">Еще %d вакансии</item>
+        <item quantity="few">Еще %d вакансии</item>
+        <item quantity="many">Еще %d вакансий</item>
+        <item quantity="other">Еще %d вакансий</item>
+    </plurals>
+
+    <plurals name="count_vacancies">
+        <item quantity="zero">%d вакансий</item>
+        <item quantity="one">%d вакансия</item>
+        <item quantity="two">%d вакансии</item>
+        <item quantity="few">%d вакансии</item>
+        <item quantity="many">%d вакансий</item>
+        <item quantity="other">%d вакансий</item>
+    </plurals>
+
+    <string-array name="month_declensions">
+        <item>января</item>
+        <item>февраля</item>
+        <item>марта</item>
+        <item>апреля</item>
+        <item>мая</item>
+        <item>июня</item>
+        <item>июля</item>
+        <item>августа</item>
+        <item>сентября</item>
+        <item>октября</item>
+        <item>ноября</item>
+        <item>декабря</item>
+    </string-array>
+
+</resources>
