@@ -21,6 +21,7 @@
     <string name="back">Назад</string>
     <string name="the_response_has_been_sent">Отклик отправлен</string>
     <string name="not_a_functional_element">Нефункциональный элемент</string>
+    <string name="filter">Фильтр</string>
 
 
     <plurals name="looking_number">
