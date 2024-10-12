@@ -10,9 +10,6 @@ import effectivemobile.aleksey.fakehh.data.database.models.VacancyDBO
 @Database(
     entities = [
         VacancyDBO::class,
-/*        ExperienceDBO::class,
-        SalaryDBO::class,
-        AddressDBO::class,*/
     ],
     exportSchema =  false,
     version = 1
