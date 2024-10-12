@@ -11,7 +11,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 object FavoriteRoute {
     @Serializable
-    data object FavoriteScreenRoute
+    internal data object FavoriteScreenRoute
 }
 
 fun NavGraphBuilder.favoriteScreen(navController: NavController) {

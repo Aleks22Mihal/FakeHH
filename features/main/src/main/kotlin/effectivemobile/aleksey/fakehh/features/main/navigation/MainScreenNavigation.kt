@@ -11,7 +11,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 object MainRoute {
     @Serializable
-    data object MainScreenRoute
+    internal data object MainScreenRoute
 }
 
 fun NavGraphBuilder.mainScreen(navController: NavController) {

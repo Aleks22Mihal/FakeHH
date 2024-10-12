@@ -13,9 +13,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
@@ -59,8 +59,8 @@ internal fun FavoriteScreen(
                         style = MaterialTheme.typography.headlineMedium,
                         color = Color.White,
                         modifier = Modifier
-                            .padding(horizontal = 16.dp)
-                            .padding(top = 32.dp)
+                            .padding(horizontal = dimensionResource(R.dimen.horizontal_padding_16))
+                            .padding(top = dimensionResource(R.dimen.top_padding_32))
 
                     )
                 }
@@ -74,8 +74,11 @@ internal fun FavoriteScreen(
                         color = MaterialTheme.colorScheme.surfaceContainerLow,
                         style = MaterialTheme.typography.titleMedium,
                         modifier = Modifier
-                            .padding(horizontal = 16.dp)
-                            .padding(top = 24.dp, bottom = 16.dp)
+                            .padding(horizontal = dimensionResource(R.dimen.horizontal_padding_16))
+                            .padding(
+                                top = dimensionResource(R.dimen.top_padding_24),
+                                bottom = dimensionResource(R.dimen.bottom_padding_16)
+                            )
                     )
                 }
                 items(state.listVacancies) { vacancy ->

@@ -11,9 +11,9 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import effectivemobile.aleksey.fakehh.common.ui.R
 import effectivemobile.aleksey.fakehh.common.ui.components.FakeScreen
@@ -42,7 +42,7 @@ internal fun VacancyScreen(
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.background
                 ),
-                windowInsets = WindowInsets(0.dp)
+                windowInsets = WindowInsets(dimensionResource(R.dimen.general_windows_insert))
             )
         },
     ) { scaffoldPadding ->

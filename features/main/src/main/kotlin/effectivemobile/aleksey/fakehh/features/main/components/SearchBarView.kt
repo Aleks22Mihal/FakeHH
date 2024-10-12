@@ -31,11 +31,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.unit.dp
 import effectivemobile.aleksey.fakehh.common.ui.R
 import effectivemobile.aleksey.fakehh.features.main.data.MainScreenEvent
 import effectivemobile.aleksey.fakehh.features.main.data.MainScreenState
@@ -52,10 +52,10 @@ internal fun SearchBarView(
 
     Row(
         verticalAlignment = Alignment.Top,
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.general_padding_8)),
         modifier = Modifier
-            .padding(horizontal = 16.dp)
-            .height(40.dp)
+            .padding(horizontal = dimensionResource(R.dimen.horizontal_padding_16))
+            .height(dimensionResource(R.dimen.search_bar_view_height))
             .fillMaxWidth()
     ) {
         BasicTextField(
@@ -89,10 +89,13 @@ internal fun SearchBarView(
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.Start),
+                        horizontalArrangement = Arrangement.spacedBy(
+                            dimensionResource(R.dimen.general_padding_8),
+                            Alignment.Start
+                        ),
                         modifier = Modifier
                             .fillMaxSize()
-                            .padding(horizontal = 8.dp)
+                            .padding(horizontal = dimensionResource(R.dimen.horizontal_padding_8))
                     ) {
                         if (state.isClickButtonMore) {
                             Image(
@@ -141,7 +144,7 @@ internal fun SearchBarView(
                 containerColor = MaterialTheme.colorScheme.onBackground
             ),
             shape = MaterialTheme.shapes.medium,
-            modifier = Modifier.size(40.dp)
+            modifier = Modifier.size(dimensionResource(R.dimen.search_bar_view_height))
         ) {
             Box(
                 contentAlignment = Alignment.Center,
@@ -149,7 +152,7 @@ internal fun SearchBarView(
             ) {
                 Image(
                     painter = painterResource(R.drawable.icon_filter_24dp),
-                    contentDescription = "",
+                    contentDescription = stringResource(R.string.filter),
                 )
             }
         }

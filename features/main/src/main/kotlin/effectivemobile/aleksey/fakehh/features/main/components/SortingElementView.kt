@@ -11,10 +11,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import effectivemobile.aleksey.fakehh.common.ui.R
 import effectivemobile.aleksey.fakehh.features.main.data.MainScreenState
 
@@ -27,7 +27,7 @@ internal fun SortingElementView(
         horizontalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp)
+            .padding(dimensionResource(R.dimen.general_padding_16))
     ) {
         Text(
             text = pluralStringResource(
@@ -40,7 +40,10 @@ internal fun SortingElementView(
         )
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.Start)
+            horizontalArrangement = Arrangement.spacedBy(
+                dimensionResource(R.dimen.general_padding_6),
+                Alignment.Start
+            )
         ) {
             Text(
                 text = stringResource(R.string.sorting_text),

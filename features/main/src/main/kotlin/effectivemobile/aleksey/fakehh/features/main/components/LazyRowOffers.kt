@@ -6,17 +6,21 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.dimensionResource
+import effectivemobile.aleksey.fakehh.common.ui.R
 import effectivemobile.aleksey.fakehh.features.main.data.MainScreenState
 
 @Composable
 internal fun LazyRowOffers(
     state: MainScreenState,
-    contentPadding: PaddingValues = PaddingValues(16.dp)
+    contentPadding: PaddingValues = PaddingValues(dimensionResource(R.dimen.general_padding_16))
 ) {
     LazyRow(
         contentPadding = contentPadding,
-        horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.Start)
+        horizontalArrangement = Arrangement.spacedBy(
+            space = dimensionResource(R.dimen.general_padding_8),
+            alignment = Alignment.Start
+        )
     ) {
         items(
             state.infoScreen.offers

@@ -18,11 +18,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import effectivemobile.aleksey.fakehh.common.ui.R
 import effectivemobile.aleksey.fakehh.domain.models.Vacancy
 import java.time.LocalDate
@@ -41,19 +41,19 @@ fun CardVacancyView(
             onClick()
         },
         shape = MaterialTheme.shapes.medium,
-        elevation = CardDefaults.elevatedCardElevation(0.dp),
+        elevation = CardDefaults.elevatedCardElevation(dimensionResource(R.dimen.card_vacancy_view_elevated)),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.onBackground
         ),
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp)
-            .padding(bottom = 16.dp)
+            .padding(horizontal = dimensionResource(R.dimen.horizontal_padding_16))
+            .padding(bottom = dimensionResource(R.dimen.bottom_padding_16))
     ) {
         Column(
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.Top,
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(dimensionResource(R.dimen.general_padding_16))
         ) {
             Row(
                 verticalAlignment = Alignment.Top,
@@ -63,7 +63,10 @@ fun CardVacancyView(
             ) {
                 Column(
                     horizontalAlignment = Alignment.Start,
-                    verticalArrangement = Arrangement.spacedBy(10.dp, Alignment.Top),
+                    verticalArrangement = Arrangement.spacedBy(
+                        dimensionResource(R.dimen.general_padding_10),
+                        Alignment.Top
+                    ),
                     modifier = Modifier.weight(0.8f)
                 ) {
                     if (vacancy.lookingNumber != null) {
@@ -90,7 +93,10 @@ fun CardVacancyView(
                         )
                     }
                     Column(
-                        verticalArrangement = Arrangement.spacedBy(4.dp, Alignment.Top),
+                        verticalArrangement = Arrangement.spacedBy(
+                            dimensionResource(R.dimen.general_padding_4),
+                            Alignment.Top
+                        ),
                         horizontalAlignment = Alignment.Start
                     ) {
                         Text(
@@ -100,7 +106,9 @@ fun CardVacancyView(
                         )
                         Row(
                             verticalAlignment = Alignment.Bottom,
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            horizontalArrangement = Arrangement.spacedBy(
+                                dimensionResource(R.dimen.general_padding_8)
+                            )
                         ) {
                             Text(
                                 text = vacancy.company,
@@ -117,7 +125,9 @@ fun CardVacancyView(
                     }
                     Row(
                         verticalAlignment = Alignment.Bottom,
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        horizontalArrangement = Arrangement.spacedBy(
+                            dimensionResource(R.dimen.general_padding_8)
+                        )
                     ) {
                         Image(
                             painter = painterResource(R.drawable.icon_experience_16dp),
@@ -159,7 +169,7 @@ fun CardVacancyView(
                 shape = MaterialTheme.shapes.large,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 16.dp)
+                    .padding(top = dimensionResource(R.dimen.top_padding_16))
             ) {
                 Text(
                     text = stringResource(R.string.respond),

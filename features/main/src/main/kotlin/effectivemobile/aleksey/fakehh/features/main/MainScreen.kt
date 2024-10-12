@@ -1,5 +1,6 @@
 package effectivemobile.aleksey.fakehh.features.main
 
+/*import effectivemobile.aleksey.fakehh.common.utilities.Constants*/
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,9 +18,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
@@ -27,6 +28,7 @@ import effectivemobile.aleksey.fakehh.common.models.LoadState
 import effectivemobile.aleksey.fakehh.common.ui.R
 import effectivemobile.aleksey.fakehh.common.ui.components.CardVacancyView
 import effectivemobile.aleksey.fakehh.common.ui.components.ErrorView
+import effectivemobile.aleksey.fakehh.common.utilities.Constants
 import effectivemobile.aleksey.fakehh.features.main.components.LazyRowOffers
 import effectivemobile.aleksey.fakehh.features.main.components.SearchBarView
 import effectivemobile.aleksey.fakehh.features.main.components.SortingElementView
@@ -39,8 +41,6 @@ internal fun MainScreen(
     navController: NavController,
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
-
-    val countVacancies = 3
 
     when (state.loadingState) {
         LoadState.Loading -> {
@@ -63,7 +63,7 @@ internal fun MainScreen(
         LoadState.Success -> {
 
             LazyColumn(
-                contentPadding = PaddingValues(top = 16.dp),
+                contentPadding = PaddingValues(top = dimensionResource(R.dimen.top_padding_16)),
             ) {
                 item {
                     SearchBarView(
@@ -81,14 +81,14 @@ internal fun MainScreen(
                         text = stringResource(R.string.vacancies_for_you),
                         style = MaterialTheme.typography.headlineMedium,
                         color = Color.White,
-                        modifier = Modifier.padding(16.dp)
+                        modifier = Modifier.padding(dimensionResource(R.dimen.general_padding_16))
 
                     )
                 }
                 items(
                     if (state.isClickButtonMore) {
                         state.infoScreen.vacancies
-                    } else state.infoScreen.vacancies.take(countVacancies)
+                    } else state.infoScreen.vacancies.take(Constants.COUNT_VACANCIES)
                 ) { vacancy ->
                     CardVacancyView(
                         vacancy = vacancy,
@@ -117,8 +117,8 @@ internal fun MainScreen(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(
-                                    vertical = 8.dp,
-                                    horizontal = 16.dp
+                                    vertical = dimensionResource(R.dimen.vertical_padding_8),
+                                    horizontal = dimensionResource(R.dimen.horizontal_padding_16)
                                 )
                         ) {
                             Text(

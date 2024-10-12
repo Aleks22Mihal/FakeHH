@@ -18,12 +18,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import effectivemobile.aleksey.fakehh.common.models.OfferId
 import effectivemobile.aleksey.fakehh.common.ui.R
 import effectivemobile.aleksey.fakehh.common.ui.theme.FakeHHTheme
@@ -49,20 +49,20 @@ internal fun CardRecommendationView(
         ),
         modifier = Modifier
             .size(
-                width = 132.dp,
-                height = 120.dp
+                width = dimensionResource(R.dimen.card_recommendation_view_width),
+                height = dimensionResource(R.dimen.card_recommendation_view_height)
             )
     ) {
         Column(
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.Top,
-            modifier = Modifier.padding(horizontal = 8.dp)
+            modifier = Modifier.padding(horizontal = dimensionResource(R.dimen.general_padding_8))
         ) {
             if (offer.id != null) {
                 Box(
                     modifier = Modifier
-                        .padding(top = 10.dp)
-                        .size(32.dp)
+                        .padding(top = dimensionResource(R.dimen.top_padding_10))
+                        .size(dimensionResource(R.dimen.card_recommendation_view_box_icon_size))
                         .background(
                             color =
                             if (offer.id == OfferId.NearVacancies)
@@ -94,7 +94,7 @@ internal fun CardRecommendationView(
                 textAlign = TextAlign.Start,
                 color = Color.White,
                 modifier = Modifier.padding(
-                    top = 16.dp,
+                    top = dimensionResource(R.dimen.top_padding_16),
                 )
             )
             if (offer.button != null) {
