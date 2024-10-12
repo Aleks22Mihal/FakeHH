@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_padding_32">32dp</dimen>
+
+    <dimen name="top_padding_24">24dp</dimen>
+
+    <dimen name="horizontal_padding_16">16dp</dimen>
+    <dimen name="vertical_padding_16">16dp</dimen>
+    <dimen name="top_padding_16">16dp</dimen>
+    <dimen name="bottom_padding_16">16dp</dimen>
+    <dimen name="general_padding_16">16dp</dimen>
+
+    <dimen name="horizontal_padding_10">10dp</dimen>
+    <dimen name="vertical_padding_10">10dp</dimen>
+    <dimen name="top_padding_10">10dp</dimen>
+    <dimen name="bottom_padding_10">10dp</dimen>
+    <dimen name="general_padding_10">10dp</dimen>
+
+    <dimen name="horizontal_padding_8">8dp</dimen>
+    <dimen name="vertical_padding_8">8dp</dimen>
+    <dimen name="top_padding_8">8dp</dimen>
+    <dimen name="bottom_padding_8">8dp</dimen>
+    <dimen name="general_padding_8">8dp</dimen>
+
+    <dimen name="general_padding_6">6dp</dimen>
+
+    <dimen name="general_padding_4">4dp</dimen>
+
+    <dimen name="general_windows_insert">0dp</dimen>
+
+    <dimen name="card_recommendation_view_width">132dp</dimen>
+    <dimen name="card_recommendation_view_height">120dp</dimen>
+    <dimen name="card_recommendation_view_box_icon_size">32dp</dimen>
+
+    <dimen name="search_bar_view_height">40dp</dimen>
+
+    <dimen name="card_vacancy_view_elevated">0dp</dimen>
+
+    <dimen name="navigation_bar_badge_size">13dp</dimen>
+</resources>
