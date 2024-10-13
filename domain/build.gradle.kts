@@ -1,24 +1,9 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.fakehh.android.library)
 }
 
 android {
     namespace = "effectivemobile.aleksey.domain"
-    compileSdk = 34
-
-    defaultConfig {
-        minSdk = 24
-
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_19
-        targetCompatibility = JavaVersion.VERSION_19
-    }
-    kotlinOptions {
-        jvmTarget = "19"
-    }
 }
 
 dependencies {
